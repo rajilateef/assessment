@@ -21,7 +21,7 @@ class postFactory extends Factory
         return [
             'title' => $this->faker->title,
             'description' => $this->faker->paragraph,
-            'user_id' => 1,
+            'user_id' => $this->faker->unique()->numberBetween(1,20),
         ];
 
     }
